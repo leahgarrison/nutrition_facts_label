@@ -56,89 +56,120 @@ html{
 
 body {
 	box-sizing: border-box;
-  font: 0.75rem;
-  border: 2px solid black;
+  font: 1rem;
+  border: 3px solid black;
   padding: 0;
-  /*outline: 3px solid green;*/
-  width: 35%;
+  width: 850px;
+  height:1550px;
   margin: 10px;
 }
 
+h1, dl, dt, dd, table, p {
+  box-sizing: border-box;
+}
+
 h1 {
-  font-family: Franklin Gothic Heavy, Arial;
-  /*outline: 2px solid pink;*/
-  padding:0;
+  font: 2.5rem Franklin Gothic Heavy, Arial;
+  padding: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 6%;
+  margin-bottom: 10px;
+}
+
+table {
+  table-layout: fixed;
+  width: 99%;
+}
+
+p {
+  font-size: 1.10rem;
+  margin: 3%;
+  margin-right: 1%;
+  text-indent: -0.6rem;
+  
 }
 
 /* make the descriptive list Individual Serving Size appear on one line */
-
 dl:nth-of-type(1) dt:nth-of-type(1), 
 dl:nth-of-type(1) dd:nth-of-type(1){
   display: inline-block;
   margin: 0;
-  width: 27%;
+  margin-left: 10px;
+  width: 23%;
   padding: 0;
   text-align: left;
-  /*outline: 2px solid green;*/
-
+  margin-bottom: 10px;
+  font-size: 1.20rem;
 }
 
 /* make the width of the middle box to fit beside the lef-hand element*/
 /* for the individual serving measurement */
 dl:nth-of-type(1) dd:nth-of-type(1) {
-  /*box-sizing: content-box;*/
+  box-sizing: content-box;
   width: 30%;
 }
 
 /* make the descriptive list Servings per container appear on one line */
-dl:nth-of-type(1) dt:nth-of-type(2), 
-dl:nth-of-type(1) dd:nth-of-type(2) {
+dl:nth-of-type(2) dt:nth-of-type(1), 
+dl:nth-of-type(2) dd:nth-of-type(1) {
   display: inline-block;
   margin: 0;
-  width: 46%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 20%;
   padding: 0;
-  /*outline: 3px solid grey;*/
+  font-size:1.20rem;
 }
 
 
+/* made the width smaller of the the dt to bring their boxes closer together - 2nd table */
+dl:nth-of-type(2) dt:nth-of-type(1) {
+  width: 43%;
+}
+
 /* give a border below Servings Per container for the thickest line */
-dl:nth-of-type(1) {
+dl:nth-of-type(2) {
   border-bottom: 30px solid black;
 }
 
 /* give a border below Calories Per Serving */
-dl:nth-of-type(2) {
+dl:nth-of-type(3) {
   border-bottom: 20px solid black;
 }
 
 /* Make Amount Per Serving Bold */
-dl:nth-of-type(2) dt:nth-of-type(1) {
+dl:nth-of-type(3) dt:nth-of-type(1) {
   font-weight: bold;
-  padding-bottom: 10px;
+  padding: 15px ;
+  padding-left: 10px;
   border-bottom: 1px solid black;
-  margin-bottom: 10px;
+  font-size: 1.15rem;
 }
 
-/* make Calories text bold */
-dl:nth-of-type(2) dt:nth-of-type(2) {
-	font-weight: bold;
-}
+
 /* Calories/Calories From Fat all One line */
-dl:nth-of-type(2) dt:nth-of-type(2),
-dl:nth-of-type(2) dd:nth-of-type(1),
-dl:nth-of-type(2) dt:nth-of-type(3),
-dl:nth-of-type(2) dd:nth-of-type(2){
-  /*outline: 5px solid pink;*/
+dl:nth-of-type(3) dt:nth-of-type(2),
+dl:nth-of-type(3) dd:nth-of-type(1),
+dl:nth-of-type(3) dt:nth-of-type(3),
+dl:nth-of-type(3) dd:nth-of-type(2){
   display: inline-block;
-  /*margin-right: 5px;*/
-  padding: 1px;
-  margin-bottom: 5px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  font-size: 1.10rem;
+  }
+
+/* make Calories text bold */
+dl:nth-of-type(3) dt:nth-of-type(2) {
+	font-weight: bold;
+	font-size: 1.15rem;
+	padding-left: 10px;
 }
 
 /* give space between the calories and calories from fat */
-dl:nth-of-type(2) dt:nth-of-type(3) {
+dl:nth-of-type(3) dt:nth-of-type(3) {
 	/*text-align:;*/
-	margin-left: 30%;
+	margin-left: 38%;
 	text-align: right;
 }
 
@@ -152,6 +183,11 @@ table:nth-of-type(1) tbody tr td:nth-last-child(1) {
   font-weight: bold;
 }
 
+/* make the micronutrient percentages not bold */
+table:nth-of-type(1) tr:nth-of-type(1n+10) td:nth-last-child(1) {
+  font-weight: normal;
+}
+
 /* add lines to the first table */
 table:nth-of-type(1) tr {
   border-bottom: 1px solid black;
@@ -163,4 +199,34 @@ table:nth-of-type(1) tr {
 table:nth-of-type(1) thead :nth-last-child(1),
 table:nth-of-type(1) tr td:nth-last-child(1) {
   text-align: right;
+}
+
+
+/* styling the first table */
+table:nth-of-type(1) td,
+table:nth-of-type(1) th {
+  box-sizing: border-box;
+  padding: 10px;
+  padding-bottom: 8px;
+  height: 30px;
+  text-align: left;
+  font-size: 1.15rem;
+  width: auto;
+}
+
+/* add the bottom border below the protein row in table 1 */
+table:nth-of-type(1) tr:nth-of-type(9){
+  border-bottom: 25px solid black;
+  
+}
+
+/* giving table two a top row bottom border */
+table:nth-of-type(2) thead  {
+  border-bottom: 2px solid black ;
+}
+/* aligning the first row text table two*/
+table:nth-of-type(2) td, table:nth-of-type(2) th {
+   padding: 5px;
+    height: 20px;
+    text-align: left;
 }
