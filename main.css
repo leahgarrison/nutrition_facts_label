@@ -1,0 +1,166 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************************************/
+
+html{
+  font: 28px Helvetica Black, Helvetica, Arial;
+  box-sizing: border-box;
+}
+
+body {
+	box-sizing: border-box;
+  font: 0.75rem;
+  border: 2px solid black;
+  padding: 0;
+  /*outline: 3px solid green;*/
+  width: 35%;
+  margin: 10px;
+}
+
+h1 {
+  font-family: Franklin Gothic Heavy, Arial;
+  /*outline: 2px solid pink;*/
+  padding:0;
+}
+
+/* make the descriptive list Individual Serving Size appear on one line */
+
+dl:nth-of-type(1) dt:nth-of-type(1), 
+dl:nth-of-type(1) dd:nth-of-type(1){
+  display: inline-block;
+  margin: 0;
+  width: 27%;
+  padding: 0;
+  text-align: left;
+  /*outline: 2px solid green;*/
+
+}
+
+/* make the width of the middle box to fit beside the lef-hand element*/
+/* for the individual serving measurement */
+dl:nth-of-type(1) dd:nth-of-type(1) {
+  /*box-sizing: content-box;*/
+  width: 30%;
+}
+
+/* make the descriptive list Servings per container appear on one line */
+dl:nth-of-type(1) dt:nth-of-type(2), 
+dl:nth-of-type(1) dd:nth-of-type(2) {
+  display: inline-block;
+  margin: 0;
+  width: 46%;
+  padding: 0;
+  /*outline: 3px solid grey;*/
+}
+
+
+/* give a border below Servings Per container for the thickest line */
+dl:nth-of-type(1) {
+  border-bottom: 30px solid black;
+}
+
+/* give a border below Calories Per Serving */
+dl:nth-of-type(2) {
+  border-bottom: 20px solid black;
+}
+
+/* Make Amount Per Serving Bold */
+dl:nth-of-type(2) dt:nth-of-type(1) {
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+/* make Calories text bold */
+dl:nth-of-type(2) dt:nth-of-type(2) {
+	font-weight: bold;
+}
+/* Calories/Calories From Fat all One line */
+dl:nth-of-type(2) dt:nth-of-type(2),
+dl:nth-of-type(2) dd:nth-of-type(1),
+dl:nth-of-type(2) dt:nth-of-type(3),
+dl:nth-of-type(2) dd:nth-of-type(2){
+  /*outline: 5px solid pink;*/
+  display: inline-block;
+  /*margin-right: 5px;*/
+  padding: 1px;
+  margin-bottom: 5px;
+}
+
+/* give space between the calories and calories from fat */
+dl:nth-of-type(2) dt:nth-of-type(3) {
+	/*text-align:;*/
+	margin-left: 30%;
+	text-align: right;
+}
+
+
+/* make the major macronutrient categories bold, 
+the major category daily value percentages bold,
+and the micronutrient categories bold (the vitamins) */
+table:nth-of-type(1)  thead,
+table:nth-of-type(1) th,
+table:nth-of-type(1) tbody tr td:nth-last-child(1) {
+  font-weight: bold;
+}
+
+/* add lines to the first table */
+table:nth-of-type(1) tr {
+  border-bottom: 1px solid black;
+ border-spacing: 10px;
+ border-collapse: separate;
+}
+
+/* align the percents in the table to the right */
+table:nth-of-type(1) thead :nth-last-child(1),
+table:nth-of-type(1) tr td:nth-last-child(1) {
+  text-align: right;
+}
